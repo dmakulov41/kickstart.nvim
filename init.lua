@@ -495,6 +495,16 @@ require('lazy').setup({
       -- Allows extra capabilities provided by blink.cmp
       'saghen/blink.cmp',
     },
+    init = function()
+      vim.lsp.config('ts_ls', {
+        init_options = {
+          preferences = {
+            importModuleSpecifier = 'relative',
+            importModuleSpecifierPreference = 'relative',
+          },
+        },
+      })
+    end,
     config = function()
       -- Brief aside: **What is LSP?**
       --
