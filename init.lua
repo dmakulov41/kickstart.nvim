@@ -854,6 +854,11 @@ require('lazy').setup({
     end,
   },
   { 'tpope/vim-fugitive', config = function() end },
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    init = function() require 'kickstart.plugins.lualine' end,
+  },
 
   require 'kickstart.plugins.blame',
   require 'kickstart.plugins.copilot',
