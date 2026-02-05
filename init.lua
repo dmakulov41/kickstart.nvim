@@ -817,11 +817,7 @@ require('lazy').setup({
     },
   },
 
-  {
-    'rebelot/kanagawa.nvim',
-    priority = 1000,
-    config = function() vim.cmd.colorscheme 'kanagawa' end,
-  },
+  require 'kickstart.plugins.colorscheme',
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
