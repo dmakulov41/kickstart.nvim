@@ -864,6 +864,11 @@ require('lazy').setup({
   require 'kickstart.plugins.copilot',
   { '907th/vim-auto-save', init = function() vim.g.auto_save = 1 end },
   { 'psliwka/vim-smoothie' },
+  -- TODO: not sure it's working though
+  {
+    'nvim-telescope/telescope-frecency.nvim',
+    config = function() require('telescope').load_extension 'frecency' end,
+  },
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
